@@ -1,0 +1,6 @@
+# Emergencies Dataset: ID|Seq|Patient|Contact|Type|Severity|Node|PrefHosp|AmbID|HospID|AmbDist|HospDist|TotalDist|Status|Time|Notes
+4
+1001|1|Ramesh Rao|9849012345|2|1|0|-1|AMB001|1|1.20|1.80|3.00|6|10:15 AM|Patient safely admitted; mission completed
+1002|2|Sneha Reddy|9849023456|4|4|7|-1|None|0|0.00|0.00|0.00|1|10:18 AM|Pending dispatch
+1003|3|Vikram Kumar|9849034567|1|2|9|-1|None|0|0.00|0.00|0.00|1|10:22 AM|Pending dispatch
+1004|4|Ananya Sharma|9849045678|3|1|10|-1|None|0|0.00|0.00|0.00|1|10:25 AM|Pending dispatch

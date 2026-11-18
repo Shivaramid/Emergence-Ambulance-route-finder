@@ -1,0 +1,34 @@
+# Locations Dataset: ID|Name|Locality|Type
+32
+0|DMart Narsingi|Narsingi|0
+1|Narsingi X Roads|Narsingi|1
+2|Narsingi Police Station|Narsingi|0
+3|Narsingi Bus Stop|Narsingi|0
+4|Narsingi Lake|Narsingi|0
+5|Ratnadeep Supermarket|Narsingi|0
+6|MN Circle|Narsingi|1
+7|Rajapushpa Regalia|Kokapet|2
+8|Alkapur Township|Neknampur|2
+9|Puppalaguda Junction|Puppalaguda|1
+10|Manikonda Main Road|Manikonda|1
+11|Neknampur Junction|Neknampur|1
+12|Manchirevula Junction|Manchirevula|1
+13|Manchirevula Bridge|Manchirevula|0
+14|Kokapet Junction|Kokapet|1
+15|Kokapet Golden Mile|Kokapet|0
+16|Gandipet Lake|Gandipet|0
+17|CBIT Gandipet|Gandipet|0
+18|Nanakramguda Circle|Nanakramguda|1
+19|Gachibowli Junction|Gachibowli|1
+20|Mehdipatnam Rythu Bazar|Mehdipatnam|1
+21|Rajendranagar Agri Univ|Rajendranagar|0
+22|Kismatpur Junction|Kismatpur|1
+23|Shamshabad Airport Road|Shamshabad|1
+24|PULSE Hospital|Narsingi|3
+25|Delight Hospital|Narsingi|3
+26|Spring Field Hospital|Puppalaguda|3
+27|DVR Hospital & Diagnostics|Manikonda|3
+28|Jasmin Multispeciality Hospital|Alkapur|3
+29|Narsingi Emergency Care|Narsingi|3
+30|Kokapet Emergency Hospital|Kokapet|3
+31|Gachibowli Emergency Hospital|Gachibowli|3

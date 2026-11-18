@@ -1,0 +1,9 @@
+# Ambulances Dataset: ID|VehicleNo|Node|Status|Equipment|AssignedEmergId|TotalKm
+7
+AMB001|TS-09-EM-1001|24|0|ALS (Advanced Life Support)|-1|45.50
+AMB002|TS-09-EM-1002|10|0|ALS (Advanced Life Support)|-1|58.00
+AMB003|TS-09-EM-1003|14|0|BLS (Basic Life Support)|-1|31.20
+AMB004|TS-09-EM-1004|19|0|ALS (Advanced Life Support)|-1|89.40
+AMB005|TS-09-EM-1005|9|0|BLS (Basic Life Support)|-1|25.00
+AMB006|TS-09-EM-1006|21|0|BLS (Basic Life Support)|-1|18.60
+AMB007|TS-09-EM-1007|6|0|ALS (Advanced Life Support)|-1|64.30

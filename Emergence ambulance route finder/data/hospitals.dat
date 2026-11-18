@@ -1,0 +1,10 @@
+# Hospitals Dataset: ID|Name|Node|Emergency|ICU|TotalBeds|AvailBeds|Status|Capacity|SelectionCount
+8
+1|PULSE Hospital|24|1|1|45|11|0|HIGH|6
+2|Delight Hospital|25|1|0|30|8|0|MEDIUM|2
+3|Spring Field Hospital|26|1|1|50|15|0|HIGH|4
+4|DVR Hospital & Diagnostics|27|1|0|35|6|0|MEDIUM|3
+5|Jasmin Multispeciality Hospital|28|1|1|60|18|0|HIGH|6
+6|Narsingi Emergency Care|29|1|1|25|5|0|LOW|4
+7|Kokapet Emergency Hospital|30|1|1|40|10|0|MEDIUM|3
+8|Gachibowli Emergency Hospital|31|1|1|75|22|0|HIGH|7
