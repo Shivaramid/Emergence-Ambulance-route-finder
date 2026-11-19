@@ -504,20 +504,20 @@ The project follows an explicit **Model-View-Controller (MVC)** architecture whi
 ### Model
 The Model layer contains the application's data structures, algorithms, and persistent data:
 
-- `graph.c / graph.h` — weighted graph and adjacency-list road network
-- `dijkstra.c / dijkstra.h` — shortest-path model and route calculation
-- `priority_queue.c / priority_queue.h` — emergency priority queue
-- `ambulance.c / ambulance.h` — ambulance fleet model
-- `hospital.c / hospital.h` — hospital model and suitability logic
-- `emergency.c / emergency.h` — emergency records and statuses
-- `file_handler.c / file_handler.h` — persistent data storage
-- `search_sort.c / search_sort.h` — searching and sorting operations
+- `model/graph.c / model/graph.h` — weighted graph and adjacency-list road network
+- `model/dijkstra.c / model/dijkstra.h` — shortest-path model and route calculation
+- `model/priority_queue.c / model/priority_queue.h` — emergency priority queue
+- `model/ambulance.c / model/ambulance.h` — ambulance fleet model
+- `model/hospital.c / model/hospital.h` — hospital model and suitability logic
+- `model/emergency.c / model/emergency.h` — emergency records and statuses
+- `model/file_handler.c / model/file_handler.h` — persistent data storage
+- `utils/search_sort.c / utils/search_sort.h` — searching and sorting operations
 - `data/*.dat` — persistent simulated datasets
 
 ### View
 The View layer is implemented by:
 
-- `ui.c / ui.h`
+- `view/ui.c / view/ui.h`
 
 It is responsible for:
 
@@ -531,7 +531,7 @@ It is responsible for:
 ### Controller
 The Controller layer is implemented by:
 
-- `controller.c / controller.h`
+- `controller/controller.c / controller/controller.h`
 
 It coordinates user actions between the View and Model. It handles:
 
