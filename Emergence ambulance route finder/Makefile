@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -pedantic -O2
 LDFLAGS = -lm
 
-SRC = main.c graph.c dijkstra.c priority_queue.c ambulance.c hospital.c emergency.c file_handler.c search_sort.c ui.c
+SRC = main.c controller.c graph.c dijkstra.c priority_queue.c ambulance.c hospital.c emergency.c file_handler.c search_sort.c ui.c
 OBJ = $(SRC:.c=.o)
 
 ifeq ($(OS),Windows_NT)
