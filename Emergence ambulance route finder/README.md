@@ -412,3 +412,175 @@ We implemented three classical course algorithms in `search_sort.c`:
 
 ## 12. LICENSE & ACADEMIC INTEGRITY
 Developed as an academic course project for Data Structures and Algorithms in Standard C. All source code is modular, fully commented, GCC-compatible, and adheres to academic standards.
+
+
+---
+
+## 7. COURSE USE CASES
+
+The application contains substantially more than the required five use cases:
+
+1. **Report Emergency** — register a patient incident from a specific landmark such as DMart Narsingi.
+2. **Prioritize Emergency** — place the incident into a Binary Min-Heap Priority Queue based on severity with FIFO tie-breaking.
+3. **Find Available Ambulance** — compare available ambulances using Dijkstra distance to the incident.
+4. **Find Suitable Hospital** — evaluate hospital readiness and choose a suitable reachable facility.
+5. **Find Shortest Route** — calculate and display a shortest route using Dijkstra's algorithm.
+6. **Assign Ambulance** — dispatch an available unit and update its status.
+7. **Complete Emergency** — mark the mission completed and return the ambulance to service.
+8. **Search Records** — search emergencies, ambulances, and landmarks.
+9. **Sort Records** — demonstrate Selection, Bubble, and Insertion Sort.
+10. **View Statistics** — display emergency, fleet, hospital, and routing statistics.
+
+### Recommended Review-1 demonstration
+
+For Review 1, demonstrate this complete scenario:
+
+```
+Patient reports emergency
+        ↓
+Select "DMart Narsingi"
+        ↓
+Select "CRITICAL"
+        ↓
+Priority Queue
+        ↓
+Find nearest available ambulance
+        ↓
+Dijkstra: Ambulance → DMart Narsingi
+        ↓
+Evaluate suitable hospital
+        ↓
+Dijkstra: DMart Narsingi → Hospital
+        ↓
+Display both routes + distance + ETA
+```
+
+This demonstrates the project's main Data Structures and Algorithms in one workflow.
+
+
+---
+
+## 8. LANDMARK-BASED LOCATION MODEL
+
+A locality such as **Narsingi is not treated as one single graph vertex**. This avoids the unrealistic situation in which a patient reports an emergency "in Narsingi" and a hospital located in Narsingi appears to be at zero distance.
+
+Instead, the graph uses specific landmarks and junctions, including:
+
+- DMart Narsingi
+- Narsingi X Roads
+- Narsingi Police Station
+- Narsingi Bus Stop
+- Narsingi Lake
+- Ratnadeep Supermarket
+- MN Circle
+- Rajapushpa Regalia
+- Alkapur Township
+- Puppalaguda Junction
+- Manikonda Main Road
+- Neknampur Junction
+- Manchirevula Junction
+- Kokapet Junction
+- Kokapet Golden Mile
+- Gandipet Lake
+- CBIT Gandipet
+- Nanakramguda Circle
+- Gachibowli Junction
+- Mehdipatnam Rythu Bazar
+- Rajendranagar Agri Univ
+- Kismatpur Junction
+- Shamshabad Airport Road
+
+Hospitals are separate graph vertices. Therefore a report such as **"Emergency at DMart Narsingi"** has a real graph source node and must travel through road edges before reaching a hospital node.
+
+All distances remain **simulated academic project weights**, not live road distances.
+
+
+---
+
+## 6. MVC ARCHITECTURE (COURSE REQUIREMENT)
+
+The project follows an explicit **Model-View-Controller (MVC)** architecture while remaining a pure terminal-based C application.
+
+### Model
+The Model layer contains the application's data structures, algorithms, and persistent data:
+
+- `graph.c / graph.h` — weighted graph and adjacency-list road network
+- `dijkstra.c / dijkstra.h` — shortest-path model and route calculation
+- `priority_queue.c / priority_queue.h` — emergency priority queue
+- `ambulance.c / ambulance.h` — ambulance fleet model
+- `hospital.c / hospital.h` — hospital model and suitability logic
+- `emergency.c / emergency.h` — emergency records and statuses
+- `file_handler.c / file_handler.h` — persistent data storage
+- `search_sort.c / search_sort.h` — searching and sorting operations
+- `data/*.dat` — persistent simulated datasets
+
+### View
+The View layer is implemented by:
+
+- `ui.c / ui.h`
+
+It is responsible for:
+
+- Terminal menus
+- Input validation and prompts
+- Tables and formatted output
+- ASCII road-network map
+- Success, warning, and error messages
+- Route display and system statistics
+
+### Controller
+The Controller layer is implemented by:
+
+- `controller.c / controller.h`
+
+It coordinates user actions between the View and Model. It handles:
+
+- Emergency registration
+- Priority-queue processing
+- Ambulance selection
+- Hospital selection
+- Dijkstra route calculation
+- Emergency completion
+- Searching
+- Sorting
+- File persistence
+- Main application lifecycle
+
+### Entry Point
+`main.c` is intentionally kept as a thin entry point:
+
+```c
+#include "controller.h"
+
+int main(void) {
+    runApplication();
+    return 0;
+}
+```
+
+This makes the MVC separation visible and easy to explain during Review 1 and the final viva.
+
+### MVC Flow
+
+```
++-------------------+
+|       VIEW        |
+|     ui.c / ui.h   |
++---------+---------+
+          |
+          v
++-------------------+
+|    CONTROLLER     |
+| controller.c/.h   |
++---------+---------+
+          |
+          v
++-------------------+
+|      MODEL        |
+| Graph / Dijkstra  |
+| PQ / Ambulance    |
+| Hospital / Files  |
++-------------------+
+```
+
+The Controller never directly draws the complete interface; it requests input/output through the View functions and invokes the Model operations for data and algorithms.
